@@ -24,6 +24,7 @@ class ServiceReference {
     
     public static func logOut() {
         currentUser? = User(id: "0", name: "null", cash: "null")
+        Goods.removeAll()
     }
     
     static func SendAuthQuery(_ login: String, _ password: String, completionHandler: @escaping (_ result: User) -> ()) {

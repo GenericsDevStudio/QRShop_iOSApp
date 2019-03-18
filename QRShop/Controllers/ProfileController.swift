@@ -10,20 +10,17 @@ import UIKit
 
 class ProfileController: UIViewController {
 
-    @IBOutlet weak var CashLabel: UILabel!
-    @IBOutlet weak var CartLabel: UILabel!
-    @IBOutlet weak var UsernameLabel: UILabel!
+    
+    @IBOutlet weak var NameUILl: UILabel!
+    @IBOutlet weak var CashUILl: UILabel!
+    @IBOutlet weak var CartUILl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("sd")
-        /*print(ServiceReference.currentUser?.cash)
-        print(ServiceReference.currentUser?.name)
-        print(ServiceReference.currentUser?.id)
         
-        UsernameLabel.text = ServiceReference.currentUser?.name
-        CashLabel.text = ServiceReference.currentUser?.cash
-        CartLabel.text = String(ServiceReference.getGoods().count)*/
+        NameUILl.text = ServiceReference.currentUser?.name
+        CashUILl.text = "Cash: \(ServiceReference.currentUser!.cash)$"
+        CartUILl.text = "\(String(ServiceReference.getGoods().count)) In Cart"
         
     }
     
@@ -34,10 +31,10 @@ class ProfileController: UIViewController {
     
     
     @IBAction func logOutButtonClick(_ sender: Any) {
-        /*ServiceReference.logOut()
+        ServiceReference.logOut()
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "logInNavController") as! UINavigationController
-        self.present(nextViewController, animated:true, completion:nil)*/
+        self.present(nextViewController, animated:true, completion:nil)
     }
     
     /*
