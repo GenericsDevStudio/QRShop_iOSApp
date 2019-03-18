@@ -9,6 +9,7 @@
 import Foundation
 
 class Product {
+    
     let identifier : String;
     let name : String;
     let price : String;

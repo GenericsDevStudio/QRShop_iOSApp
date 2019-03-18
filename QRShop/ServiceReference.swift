@@ -12,6 +12,20 @@ class ServiceReference {
     
     public static var currentUser: User? = User(id: "0", name: "null", cash: "null")
     
+    private static var Goods: [Product] = [Product(identifier: "123456", name: "Macbook", price: "60000")];
+    
+    public static func getGoods() -> [Product] {
+        return Goods
+    }
+    
+    public static func clearGoods() {
+        Goods.removeAll()
+    }
+    
+    public static func logOut() {
+        currentUser? = User(id: "0", name: "null", cash: "null")
+    }
+    
     static func SendAuthQuery(_ login: String, _ password: String, completionHandler: @escaping (_ result: User) -> ()) {
         
         print(login)

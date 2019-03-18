@@ -9,9 +9,10 @@
 import UIKit
 
 class GoodsListController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet weak var userNameMenu: UIBarButtonItem!
     
-    var Goods: [Product] = [Product(identifier: "123456", name: "Macbook", price: "60000")];
+    var Goods: [Product] = ServiceReference.getGoods()
     let ProductCellIdentifier = "ProductCellIdentifier"
     
     override func viewDidLoad() {

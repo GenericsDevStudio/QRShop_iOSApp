@@ -10,9 +10,9 @@ import Foundation
 
 class User: Decodable {
     
-    var id: String
-    var name: String
-    var cash: String
+    let id: String
+    let name: String
+    let cash: String
     
     init(id: String, name: String, cash: String) {
         self.id = id

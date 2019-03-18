@@ -15,7 +15,6 @@ class LogInController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     @IBAction func logInBtnOnClick(_ sender: Any) {
@@ -35,7 +34,7 @@ class LogInController: UIViewController {
     
     func logInApp() {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "logInNavConroller") as! UINavigationController
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "basketNavController") as! UINavigationController
         self.present(nextViewController, animated:true, completion:nil)
     }
 
